@@ -19,8 +19,8 @@ const parseForESLint = (code, options) => {
 			body: [],
 			loc: {
 				source: code,
-				start: {line: 0, column: 0},
-				end: {line: lines.length - 1, column: lines.at(-1).length},
+				start: {line: 1, column: 0},
+				end: {line: lines.length, column: lines.at(-1).length},
 			},
 			range: [0, code.length],
 			tokens: [],
