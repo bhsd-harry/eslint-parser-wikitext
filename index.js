@@ -1,6 +1,12 @@
 'use strict';
+const {AST} = require('eslint');
 const /** @type {Parser} */ Parser = require('wikiparser-node');
 
+/**
+ * @param {string} code
+ * @param {{include?: boolean, config?: ParserConfig}} options
+ * @returns {{ast: AST.Program, services: {errors: LintError[]}}}
+ */
 const parseForESLint = (code, options) => {
 	const root = Parser.parse(code, options?.include, undefined, options?.config),
 		lines = code.split('\n');

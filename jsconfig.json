@@ -3,5 +3,10 @@
 		"target": "esnext",
 		"module": "commonJS",
 		"moduleResolution": "node"
+	},
+	"typeAcquisition": {
+		"include": [
+			"eslint"
+		]
 	}
 }

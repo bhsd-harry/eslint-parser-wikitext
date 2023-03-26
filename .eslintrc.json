@@ -61,7 +61,7 @@
 		"no-unused-vars": [
 			2,
 			{
-				"varsIgnorePattern": "^(?:Ast\\w*|\\w*Token|Title)$",
+				"varsIgnorePattern": "^AST$",
 				"args": "all",
 				"argsIgnorePattern": "^_+$",
 				"caughtErrors": "all",
@@ -97,16 +97,7 @@
 		"arrow-body-style": 2,
 		"block-scoped-var": 2,
 		"camelcase": 2,
-		"class-methods-use-this": [
-			2,
-			{
-				"exceptMethods": [
-					"getPadding",
-					"getGaps",
-					"isPlain"
-				]
-			}
-		],
+		"class-methods-use-this": 2,
 		"consistent-return": 2,
 		"curly": 2,
 		"default-case": 2,
@@ -195,12 +186,6 @@
 		"no-new-object": 2,
 		"no-new-wrappers": 2,
 		"no-octal-escape": 2,
-		"no-restricted-globals": [
-			2,
-			"root",
-			"escape",
-			"constructor"
-		],
 		"no-return-assign": [
 			2,
 			"always"
@@ -224,8 +209,7 @@
 			2,
 			{
 				"allow": [
-					"_",
-					"__"
+					"_"
 				],
 				"enforceInMethodNames": true,
 				"enforceInClassFields": true,
