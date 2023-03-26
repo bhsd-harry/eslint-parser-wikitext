@@ -1,6 +1,6 @@
 {
 	"name": "eslint-parser-wikitext",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "ESLint parser for Wikitext",
 	"keywords": [
 		"eslint",
