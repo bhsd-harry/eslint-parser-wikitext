@@ -8,7 +8,10 @@ const /** @type {Parser} */ Parser = require('wikiparser-node');
  * @returns {{ast: AST.Program, services: {errors: LintError[]}}}
  */
 const parseForESLint = (code, options) => {
-	const root = Parser.parse(code, options?.include, undefined, options?.config),
+	if (options?.config) {
+		Parser.config = options.config;
+	}
+	const root = Parser.parse(code, options?.include),
 		lines = code.split('\n');
 	return {
 		ast: {
