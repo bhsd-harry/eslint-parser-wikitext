@@ -25,7 +25,7 @@
 		"test": "eslint ."
 	},
 	"dependencies": {
-		"wikiparser-node": "^0.10.0-m"
+		"wikiparser-node": "0.10.0-m"
 	},
 	"peerDependencies": {
 		"eslint": "^8.30.0"
