@@ -1,0 +1,41 @@
+{
+	"name": "eslint-parser-wikitext",
+	"version": "0.0.0",
+	"description": "ESLint parser for wikitext",
+	"keywords": [
+		"eslint",
+		"mediawiki",
+		"wikitext",
+		"parser"
+	],
+	"homepage": "https://github.com/bhsd-harry/eslint-parser-wikitext",
+	"bugs": {
+		"url": "https://github.com/bhsd-harry/eslint-parser-wikitext/issues"
+	},
+	"license": "GPL-3.0",
+	"author": "Bhsd",
+	"files": [
+		"/index.js"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bhsd-harry/eslint-parser-wikitext.git"
+	},
+	"scripts": {
+		"test": "eslint ."
+	},
+	"dependencies": {
+		"wikiparser-node": "^0.10.0"
+	},
+	"peerDependencies": {
+		"eslint": "^8.30.0"
+	},
+	"devDependencies": {
+		"eslint-plugin-n": "^15.6.0",
+		"eslint-plugin-json-es": "^1.5.7",
+		"eslint-plugin-eslint-comments": "^3.2.0"
+	},
+	"engines": {
+		"node": "^18.4.0"
+	}
+}
