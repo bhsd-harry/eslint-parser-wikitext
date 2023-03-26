@@ -2,6 +2,6 @@
 
 ESLint parser for Wikitext
 
-## Usage
+## Integration
 
 Please refer to [eslint-plugin-wikitext](https://github.com/bhsd-harry/eslint-plugin-wikitext).
