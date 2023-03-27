@@ -1,6 +1,6 @@
 'use strict';
 const {AST} = require('eslint');
-const /** @type {Parser} */ Parser = require('wikiparser-node');
+const /** @type {Parser} */ Parser = require('wikilint');
 
 /**
  * @param {string} code
