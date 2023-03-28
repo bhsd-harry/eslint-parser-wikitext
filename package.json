@@ -25,7 +25,7 @@
 		"test": "eslint ."
 	},
 	"dependencies": {
-		"wikilint": "^0.10.0"
+		"wikilint": "^1.0.0"
 	},
 	"peerDependencies": {
 		"eslint": "^8.30.0"
