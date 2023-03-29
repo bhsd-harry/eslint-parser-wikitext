@@ -1,11 +1,10 @@
 'use strict';
-const {AST} = require('eslint');
-const /** @type {Parser} */ Parser = require('wikilint');
+const Parser = require('wikilint');
 
 /**
  * @param {string} code
- * @param {{include?: boolean, config?: ParserConfig}} options
- * @returns {{ast: AST.Program, services: {errors: LintError[]}}}
+ * @param {{include?: boolean, config?: Parser.AttributeToken.ParserConfig}} options
+ * @returns {{ast: import('eslint').AST.Program, services: {errors: Parser.AstText.LintError[]}}}
  */
 const parseForESLint = (code, options) => {
 	if (options?.config) {
