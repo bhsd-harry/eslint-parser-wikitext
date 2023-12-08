@@ -3,8 +3,8 @@ const Parser = require('wikilint');
 
 /**
  * @param {string} code
- * @param {{include?: boolean, config?: Parser.AttributeToken.ParserConfig}} options
- * @returns {{ast: import('eslint').AST.Program, services: {errors: Parser.AstText.LintError[]}}}
+ * @param {{include?: boolean, config?: import('wikilint').Config}} options
+ * @returns {{ast: import('eslint').AST.Program, services: {errors: import('wikilint').LintError[]}}}
  */
 const parseForESLint = (code, options) => {
 	if (options?.config) {
