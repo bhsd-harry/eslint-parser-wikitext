@@ -1,12 +1,11 @@
-'use strict';
-const Parser = require('wikilint');
+import Parser = require('wikilint');
+import type {AST} from 'eslint';
+import type {Config, LintError} from 'wikilint';
 
-/**
- * @param {string} code
- * @param {{include?: boolean, config?: import('wikilint').Config}} options
- * @returns {{ast: import('eslint').AST.Program, services: {errors: import('wikilint').LintError[]}}}
- */
-const parseForESLint = (code, options) => {
+const parseForESLint = (
+	code: string,
+	options?: {include?: boolean, config?: Config},
+): {ast: AST.Program, services: {errors: LintError[]}} => {
 	if (options?.config) {
 		Parser.config = options.config;
 	}
@@ -15,11 +14,11 @@ const parseForESLint = (code, options) => {
 	return {
 		ast: {
 			type: 'Program',
+			sourceType: 'module',
 			body: [],
 			loc: {
-				source: code,
 				start: {line: 1, column: 0},
-				end: {line: lines.length, column: lines.at(-1).length},
+				end: {line: lines.length, column: lines.at(-1)!.length},
 			},
 			range: [0, code.length],
 			tokens: [],
