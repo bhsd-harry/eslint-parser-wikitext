@@ -28,7 +28,7 @@
 		"test": "tsc --noEmit && eslint ."
 	},
 	"dependencies": {
-		"wikilint": "^2.0.0"
+		"wikilint": "^2.1.0"
 	},
 	"peerDependencies": {
 		"eslint": "^8.53.0"
