@@ -23,7 +23,6 @@
 		],
 		"no-constant-binary-expression": 2,
 		"no-constructor-return": 2,
-		"no-control-regex": 0,
 		"no-fallthrough": 2,
 		"no-inner-declarations": [
 			2,
@@ -200,7 +199,7 @@
 		"no-shadow": [
 			2,
 			{
-				"builtinGlobals": false
+				"builtinGlobals": true
 			}
 		],
 		"no-throw-literal": 2,
@@ -405,7 +404,8 @@
 			2,
 			"single",
 			{
-				"allowTemplateLiterals": true
+				"allowTemplateLiterals": true,
+				"avoidEscape": true
 			}
 		],
 		"rest-spread-spacing": 2,
@@ -536,7 +536,7 @@
 				"@typescript-eslint/no-shadow": [
 					2,
 					{
-						"builtinGlobals": false
+						"builtinGlobals": true
 					}
 				],
 				"no-throw-literal": 0,

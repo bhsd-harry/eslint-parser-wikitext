@@ -9,7 +9,7 @@ const parseForESLint = (
 	if (options?.config) {
 		Parser.config = options.config;
 	}
-	const root = Parser.parse(code, options?.include),
+	const token = Parser.parse(code, options?.include),
 		lines = code.split('\n');
 	return {
 		ast: {
@@ -25,7 +25,7 @@ const parseForESLint = (
 			comments: [],
 		},
 		services: {
-			errors: root.lint(),
+			errors: token.lint(),
 		},
 	};
 };
