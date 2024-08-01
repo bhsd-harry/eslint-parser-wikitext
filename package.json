@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"@bhsd/common": "^0.0.0",
-		"@types/eslint": "^8.56.10"
+		"@types/eslint": "^9.6.0"
 	},
 	"engines": {
 		"node": "^20.9.0"
