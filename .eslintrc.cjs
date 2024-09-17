@@ -1,4 +1,3 @@
-/* eslint @stylistic/array-bracket-newline: [2, {minItems: 1}] */
 'use strict';
 
 const config = require('@bhsd/common/eslintrc.node.cjs');
@@ -16,15 +15,11 @@ for (const key in rules) {
 
 module.exports = {
 	...config,
-	plugins: [
-		'@stylistic',
-	],
+	plugins: ['@stylistic'],
 	extends: [
 		'eslint:recommended',
 		'plugin:n/recommended-script',
 		'plugin:eslint-comments/recommended',
 	],
-	overrides: [
-		ts,
-	],
+	overrides: [ts],
 };
