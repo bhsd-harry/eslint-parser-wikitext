@@ -1,10 +1,11 @@
 {
 	"include": [
-		"index.ts"
+		"src/index.ts"
 	],
 	"compilerOptions": {
-		"target": "es2022",
-		"module": "CommonJS",
+		"target": "es2024",
+		"module": "NodeNext",
+		"declaration": true,
 		"outDir": "dist",
 		"alwaysStrict": true,
 		"exactOptionalPropertyTypes": true,

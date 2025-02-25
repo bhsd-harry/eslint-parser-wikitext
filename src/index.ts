@@ -1,16 +1,19 @@
-import Parser = require('wikilint');
+import Parser from 'wikilint';
+// @ts-expect-error JSON import
+import {name, version} from '../package.json';
 import type {AST} from 'eslint';
 import type {Config, LintError} from 'wikilint';
 
-const parseForESLint = (
+export const meta = {name, version};
+
+export const parseForESLint = (
 	code: string,
-	options?: {include?: boolean, config?: Config},
+	options?: {include?: boolean, config?: Config | string},
 ): {ast: AST.Program, services: {errors: LintError[]}} => {
 	if (options?.config) {
 		Parser.config = options.config;
 	}
-	const token = Parser.parse(code, options?.include),
-		lines = code.split('\n');
+	const lines = code.split(/\r?\n/u);
 	return {
 		ast: {
 			type: 'Program',
@@ -25,9 +28,7 @@ const parseForESLint = (
 			comments: [],
 		},
 		services: {
-			errors: token.lint(),
+			errors: Parser.parse(code, options?.include).lint(),
 		},
 	};
 };
-
-module.exports = {parseForESLint};

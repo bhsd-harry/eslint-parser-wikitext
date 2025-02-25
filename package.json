@@ -1,6 +1,6 @@
 {
 	"name": "eslint-parser-wikitext",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "ESLint parser for Wikitext",
 	"keywords": [
 		"eslint",
@@ -15,29 +15,30 @@
 	"license": "GPL-3.0",
 	"author": "Bhsd",
 	"files": [
-		"/dist/index.js"
+		"/dist/*"
 	],
 	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/bhsd-harry/eslint-parser-wikitext.git"
 	},
 	"scripts": {
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "npm run lint && npm run build",
 		"build": "tsc",
-		"test": "tsc --noEmit && eslint ."
+		"lint": "tsc --noEmit && eslint ."
 	},
 	"dependencies": {
-		"wikilint": "^2.9.0"
+		"wikilint": "^2.16.5"
 	},
 	"peerDependencies": {
-		"eslint": "^8.56.0"
+		"eslint": "^8.57.1"
 	},
 	"devDependencies": {
-		"@bhsd/common": "^0.1.1",
+		"@bhsd/common": "^0.6.6",
 		"@types/eslint": "^8.56.10"
 	},
 	"engines": {
-		"node": ">=20.9.0"
+		"node": ">=18.12.0"
 	}
 }
